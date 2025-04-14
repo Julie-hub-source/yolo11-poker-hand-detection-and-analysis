@@ -17,7 +17,8 @@ def detect_cards(image_path, weights_path, conf=0.5, save_output=True):
         list: List of unique cards detected in the image, sorted left to right.
     '''
     model = YOLO(weights_path, task='detect')
-    results = model.predict(image_path, save=False, conf=conf)[0]
+    result = model.predict(source=image_path, conf=conf, save=False)[0]
+
     
     cards = []
     card_names = []
