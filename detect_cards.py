@@ -129,7 +129,7 @@ def decode_cards(cards):
 
 if __name__ == '__main__':
     # Test on the first image
-    image_path = 'images/giatribai.jpg'
+    image_path = 'images/Giatribai.jpg'
     weights_path = 'weights/poker_best.pt'
     cards = detect_cards(image_path, weights_path)
     print("\n".join(decode_cards(cards)))
